@@ -1,0 +1,1501 @@
+/* **************************
+    ----5.MEDIA QUERY ------
+*************************** */
+
+/*!
+
+=========================================================
+* ACMS  - v1.0.0
+=========================================================
+
+* Coded by Sky Map Team
+
+=========================================================
+
+/* 
+
+------------INDEX----------
+1.Extra Small Mobile Devices
+2.Small Landscape Mobile Device
+3.For Tablet Devices
+4.For Laptop and Small Desktop Devices
+5.Desktop Devices1
+6.Desktop Devices2
+7.Desktop Devices3
+7.Desktop Devices4
+
+
+*/
+
+/* 
+-----------------------------
+1.Extra Small Mobile Devices
+-----------------------------
+*/
+:root {
+  --primary-color:#0a50a0;
+}
+
+@media (max-width: 575.98px) {
+  .total_visitors_section {
+    margin-top: 45px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .dashboard_map_wrapper {
+    padding-top: 0px;
+  }
+
+  .covid_map {
+    height: 300px !important;
+    margin: 5px 0px;
+  }
+  
+  .body_map_wrapper {
+    margin-top: 15px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .body_chart_wrapper {
+    overflow: hidden;
+    margin-top: 5px;
+    height: auto;
+  }
+  .dashboard_option_wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 15px;
+    height: auto;
+  }
+
+  .body_chart_wrapper {
+    margin-top: 15px;
+  }
+
+  .visitor_chart {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+
+  .dashboard_chart_2 {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .site_footer_wrapper {
+    position: absolute;
+    top: 0;
+    margin-top: 55px;
+    height: 50px;
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  .site_footer_wrapper p {
+    font-size: 12px;
+    color: #0e0f0f;
+  }
+
+  .app_title {
+    display: none;
+  }
+
+  .mobile_menu_title {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: 75px;
+    color: #18191a;
+  }
+
+  .app_title_app_name {
+    margin-left: 6px;
+    color: #0a50a0;
+    font-size: 13px;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+  }
+
+  .app_logo {
+    width: 30%;
+  }
+   
+
+  .visitor_count,
+  .last_updated_status {
+    display: none;
+  }
+
+  .login_body {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .login_header {
+    display: inline-block;
+  }
+
+  .login_logo_image {
+    margin-top: 20px;
+    width: 30%;
+  }
+
+  .dashboard_current_status {
+    margin-bottom: 30px;
+  }
+  .el-form.el-form--label-right.en-US {
+    margin-left: -65px;
+  }
+  .user_ico {
+    margin-top: 50px;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .el-date-editor,
+  .el-select {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .el-table .cell {
+    white-space: nowrap;
+  }
+  .pagination_section {
+    overflow-x: scroll;
+    overflow-y: hidden;
+ 
+  }
+  .el-message-box {
+    width: auto !important;
+  }
+
+  .navbar-wrapper{
+    display:none;
+  }
+  #dashboard-container{
+    margin: 10px !important;
+  }
+  .body-container{
+    padding-top: 0px !important;
+  }
+  .heading-wrapper-daily-covid{
+    font-size: 14px !important;
+  }
+  .heading-wrapper-cummulative{
+    font-size: 14px !important;
+  } 
+  .daily-covid-bed-statistics-wrapper .card {
+    height: 60px !important;
+  }
+  .heading-card-small {
+    font-size: 0.65rem !important;
+    font-weight: 500 !important;
+  }
+ 
+  .daily-covid-bed-statistics-wrapper .card-body {
+    padding: 0.3rem !important;
+  }
+  .daily-covid-card-text {
+    font-size: 15px !important;
+  }
+  .cummulative-card-text{
+    font-size: 15px !important;
+  }
+
+  .cummulative-card-wrapper{
+    flex: 0 0 28% !important;
+    max-width: 28% !important;
+    margin: 0 -1.5rem 0 0.3rem !important;
+  }
+  .statistics-wrapper{
+    height: auto !important;
+  }
+  .statistics-wrapper .card {
+    height: 80px  !important;
+  }
+  .bed-stats-card-body {
+    padding: 0.7rem 0.2rem 0rem 0.2rem !important;
+}
+  
+
+  .heading-wrapper-bed-2{
+    font-size: 14px !important;
+  }
+  .bed-2-card{ font-size: 14px !important}
+
+  .legend { text-align: left; line-height: 14px; color: #555; font-size:10px;} 
+  .legend i { width: 14px; height: 12px; float: left; margin-right: 6px; opacity: 0.7; }
+  .info {
+    padding: 4px 7px;
+    font: 10px Arial, Helvetica, sans-serif;
+  }
+  .info span{
+    font-size: 10px !important;
+  }
+ 
+.bed-2-count-number {
+    font-size: 15px !important; 
+  }
+  .section-4{
+    height:100% !important;
+  }
+  .section-postivity-charts{
+    height:1000px !important;
+  }
+  #first-chart-order{
+    order: 1;
+  }  
+  #second-chart-order{
+    order: 3;
+  }  #third-chart-order{
+    order: 2;
+  }  #fourth-chart-order{
+    order: 4;
+  }
+  .filter-section {
+    padding: 0.3rem !important;
+    border: 0.2px solid #01475440 !important;
+    border-bottom: 0 !important;
+    margin-top: 5px !important;
+    border-radius: 5px;
+  }
+  .covid-filter {
+    font-size: 17px !important;
+    width: 50% !important;
+   }
+   .el-date-editor--daterange.el-input {
+    width: 135px !important;
+   }
+   .char-section {
+    border: 0.3px solid #01475440 !important;
+    border-top: 0 !important;
+    border-radius: 5px;
+  }
+  .heading-wrapper-vaccination{
+    padding: 3px !important;
+    font-size: 14px !important;
+  }
+  .vaccination-wrapper .card {
+    height: 42px !important;
+    margin: 2px 0 2px 0 !important;
+  }
+  .vaccination-card {
+    font-size: 0.85rem !important;
+  }
+  .vaccination-card-body{
+    padding: 0.8rem !important;
+  }
+  .vaccination-card-text {
+    font-size: 15px !important;
+  }
+  .vaccination-chart-wrapper {
+    height:400px;
+  }
+
+  .section-5 {
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+    height:400px !important;
+  }
+  }
+
+/* 
+---------------------------------
+2. Small Landscape Mobile Device
+---------------------------------
+*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .total_visitors_section {
+    margin-top: 45px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .app_title_app_name {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  .heading-wrapper-daily-covid{
+    font-size:17px !important;
+  }
+
+  .daily-covid-bed-statistics-wrapper .card {
+    height: 60px !important;
+  }
+  .daily-covid-card-text {
+    font-size: 16px !important;
+  }
+  .heading-card-small {
+    font-size: 11px !important;
+  }
+  .statistics-wrapper{
+    height: 172px !important;
+    margin-bottom: 5px !important;
+  }
+  .statistics-wrapper-cummulative{
+    max-height: 129px !important;
+    margin-bottom: 5px !important;
+    margin-top: 5px;
+  }
+  .dashboard_map_wrapper {
+    padding-top: 0px;
+  }
+  .covid_map {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .body_map_wrapper {
+    margin-top: 15px;
+  }
+  .heading-wrapper-cummulative{
+    font-size: 17px !important;
+  }
+  .statistics-wrapper .card {
+    max-height: 85px !important;
+  }
+  .section-4{
+    height:100% !important
+  }
+  .section-4 .card {
+    height: 160px !important
+  }
+  .bed-2-card{
+    height:3.3rem !important;
+    font-size: 13px !important;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+  }
+  .bed-2-count-info-wrapper-1, .bed-2-count-info-wrapper {
+    justify-content: space-between !important;
+  }
+  .bed-stats-card-body {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+}
+.bed-2-wrapper .card-body{
+  justify-content: initial !important
+}
+  .dashboard_option_wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 15px;
+  }
+  #first-chart-order{
+    order: 1;
+  }  
+  #second-chart-order{
+    order: 3;
+  }  #third-chart-order{
+    order: 2;
+  }  #fourth-chart-order{
+    order: 4;
+  }
+  .section-postivity-charts{
+    height:100% !important;
+  }
+  .char-section {
+    max-height: 350px !important;
+    height: 350px !important;
+  }
+  .body_chart_wrapper {
+    margin-top: 15px;
+  }
+
+  .heading-wrapper-vaccination{
+    font-size: 17px !important;
+    padding: 3px !important;
+
+  }
+  .vaccination-wrapper .card{
+    height:100px !important
+  }
+  .vaccination-card{
+    font-size: 13px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .vaccination-card-body{
+    padding:6px !important;
+    display: flex;
+    flex-direction: column !important;
+    justify-content:space-between !important;
+    text-align:center !important;
+    align-items:center !important;
+  }
+  .vaccination-chart-wrapper{
+    height:300px !important;
+  }
+  .visitor_chart {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+  .dashboard_chart_2 {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .site_footer_wrapper {
+    position: absolute;
+    top: 0;
+    margin-top: 55px;
+    height: 50px;
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+  .site_footer_wrapper p {
+    font-size: 12px;
+    color: #1f2122;
+  }
+  .app_title {
+    display: none;
+  }
+  .mobile_menu_title {
+    /* display: block; */
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: 90px;
+    color: #0c0c0c;
+  }
+  .app_logo {
+    width: 22%;
+  }
+  .visitor_count,
+  .last_updated_status {
+    display: none;
+  }
+  .dashboard_options {
+    padding: 20px;
+    width: 180px;
+    height: 100px;
+    margin-top: 5px;
+    background: #01475478;
+    border-radius: 3px;
+  }
+  .login_body {
+    width: 80%;
+    margin-top: 80px;
+  }
+  .login_header {
+    display: inline-block;
+  }
+  .login_logo_image {
+    margin-top: 20px;
+    width: 30%;
+  }
+  .mobile_app_user_wrapper {
+    width: 100%;
+  }
+  .dashboard_current_status {
+    margin-bottom: 30px;
+  }
+}
+
+/* 
+---------------------------------
+3. For Tablet Devices
+---------------------------------
+*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #myChart2 {
+    height: 250px !important;
+  }
+  .dashboard_options {
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+    margin-top: 5px;
+    background: #01475478;
+    border-radius: 3px;
+  }
+  .dash_option_title {
+    font-size: 10px;
+  }
+  .citizen_opt_number,
+  .deceased_opt_number,
+  .recovered_opt_number,
+  .quarantine_opt_number,
+  .confirmed_opt_number,
+  .suspected_options_number {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .site_footer_wrapper {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+  }
+  .site_footer_wrapper p {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: #1b1e1f;
+  }
+  .login_body {
+    width: 60%;
+    margin-top: 40%;
+  }
+  .login_header {
+    display: inline-block;
+  }
+  .login_logo_image {
+    margin-top: 20px;
+    width: 30%;
+  }
+  .visitor_count,
+  .last_updated_status {
+    display: none;
+  }
+  .app_title {
+    font-size: 12px;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.en-US {
+    height: 80vh !important;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.el-table--enable-row-transition {
+    min-height: 80vh;
+  }
+}
+
+/* 
+---------------------------------------
+4. For Laptop and Small Desktop Devices
+---------------------------------------
+*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .dash_option_title {
+    font-size: 10px;
+  }
+  #myChart2 {
+    height: 150px !important;
+  }
+  .dashboard_options {
+    padding: 15px 10px;
+    min-width: 120px;
+    margin-top: 5px;
+    background: #01475478;
+    border-radius: 3px;
+  }
+  .citizen_opt_number,
+  .deceased_opt_number,
+  .recovered_opt_number,
+  .quarantine_opt_number,
+  .confirmed_opt_number,
+  .suspected_options_number {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .site_footer_wrapper {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+  }
+  .site_footer_wrapper p {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: #9db3b7;
+  }
+  .login_body {
+    width: 40%;
+    margin-top: 80px;
+  }
+  .login_header {
+    display: inline-block;
+  }
+  .login_logo_image {
+    margin-top: 20px;
+    width: 30%;
+  }
+}
+
+/* 
+---------------------------------
+5. Desktop Devices1
+---------------------------------
+*/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .dash_option_title {
+    font-size: 12px;
+  }
+  .citizen_opt_number,
+  .deceased_opt_number,
+  .recovered_opt_number,
+  .quarantine_opt_number,
+  .confirmed_opt_number,
+  .suspected_options_number {
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+/* 
+---------------------------------
+6. Desktop Devices2
+---------------------------------
+*/
+
+@media screen and (min-width: 1400px) and (max-width: 1599.98px) {
+  .container {
+    min-width: 1370px;
+    overflow-x: hidden;
+  }
+  .app_logo {
+    width: 10%;
+  }
+  .dashboard_options {
+    padding: 30px 10px 30px 10px;
+    margin-top: 5px;
+    background: #01475478;
+    border-radius: 3px;
+  }
+
+  .dist_visitor_inner_list,
+  .titile_dist {
+    width: 40%;
+  }
+  .confirmed_inner_list,
+  .title_confd {
+    width: 17%;
+  }
+  .deceased_inner_list,
+  .title_rcvrd {
+    width: 13%;
+  }
+  .recovered_inner_list,
+  .titledcsd {
+    width: 13%;
+  }
+  .active_inner_list,
+  .titleactive {
+    width: 17%;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.en-US {
+    height: 35rem !important;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.el-table--enable-row-transition {
+    min-height: 35rem;
+  }
+  .login_body {
+    margin-top: 12%;
+  }
+  .login_header {
+    display: inline;
+  }
+  .login_logo_image {
+    width: 40%;
+  }
+  #myChart2 {
+    height: 200px !important;
+  }
+}
+
+/* 
+---------------------------------
+7. Desktop Devices3
+---------------------------------
+*/
+
+@media screen and (min-width: 1600px) and (max-width: 1899.98px) {
+  .container {
+    min-width: 1570px;
+    overflow-x: hidden;
+
+  }
+  .app_logo {
+    width: 10%;
+  }
+  .dashboard_options {
+    padding: 40px 10px 40px 10px;
+    width: 190px;
+    margin-top: 5px;
+    background: #01475478;
+    border-radius: 3px;
+  }
+  .dist_visitor_inner_list,
+  .titile_dist {
+    width: 40%;
+  }
+  .confirmed_inner_list,
+  .title_confd {
+    width: 17%;
+  }
+  .deceased_inner_list,
+  .title_rcvrd {
+    width: 13%;
+  }
+  .recovered_inner_list,
+  .titledcsd {
+    width: 13%;
+  }
+  .active_inner_list,
+  .titleactive {
+    width: 17%;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.en-US {
+    height: 40rem !important;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.el-table--enable-row-transition {
+    min-height: 40rem;
+  }
+  .login_body {
+    margin-top: 12%;
+    width: 25%;
+  }
+  .login_header {
+    display: inline;
+  }
+  .login_logo_image {
+    width: 40%;
+  }
+  #myChart2 {
+    height: 250px !important;
+  }
+}
+
+/* 
+---------------------------------
+8. Desktop Devices4
+---------------------------------
+*/
+
+@media screen and (min-width: 1900px) {
+  #myChart2 {
+    height: 280px !important;
+  }
+  .container {
+    min-width: 1870px;
+    overflow-x: hidden;
+
+  }
+  .app_logo {
+    width: 10%;
+  }
+  .dashboard_options {
+    padding: 45px 10px 45px 10px;
+    width: 200px;
+    margin-top: 10px;
+    background: #01475478;
+    border-radius: 3px;
+  }
+  .dist_visitor_inner_list,
+  .titile_dist {
+    width: 40%;
+  }
+  .confirmed_inner_list,
+  .title_confd {
+    width: 17%;
+  }
+  .deceased_inner_list,
+  .title_rcvrd {
+    width: 13%;
+  }
+  .recovered_inner_list,
+  .titledcsd {
+    width: 13%;
+  }
+  .active_inner_list,
+  .titleactive {
+    width: 17%;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.en-US {
+    height: 45rem !important;
+  }
+  .el-table.el-table--fit.el-table--enable-row-hover.el-table--enable-row-transition {
+    min-height: 45rem;
+  }
+  .login_body {
+    margin-top: 12%;
+    width: 25%;
+  }
+  .login_header {
+    display: inline;
+  }
+  .login_logo_image {
+    width: 40%;
+  }
+}
+
+/* ``````````````````````````````````````````````````````````````````````````````````````````````````````````````` */
+/* Dashboard New Layout CSS */
+.body-container {
+  /* max-width: 1112px; */
+  margin: auto;
+  /* margin-top: 10px; */
+  /* background-color: #f4f6f9; */
+  background-color: #fff;
+  padding-bottom: 50px;
+  overflow-x: clip;
+  padding-top: 10px;
+}
+
+/* .statistics-container{
+ 
+  } */
+.covid_map {
+  height: 347px;
+  border: 2px solid #e3e3e3;
+  border-radius: 6px;
+}
+
+.heading-wrapper {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2px;
+  background: #f3082f21;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  max-width: 100%;
+  margin-left: 1px;
+  border-radius: 2px;
+}
+.heading-wrapper-daily-covid {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2px;
+  color: #e92824;
+  background: #f2ddda;
+  font-size: 19px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  max-width: 100%;
+  margin-left: 1px;
+  border-radius: 2px;
+}
+
+.heading-wrapper-cummulative {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2px;
+  color: #112035;
+  background: #dce4f1;
+  font-size: 19px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  max-width: 100%;
+  margin-left: 1px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.heading-wrapper-bed {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2px;
+  color: #146396;
+  background: #dbecf3;
+  font-size: 19px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  max-width: 100%;
+  margin-left: 1px;
+  border-radius: 2px;
+}
+
+.heading-wrapper-vaccination {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2px;
+  color: #070d02;
+  background: #d8ff9a59;
+  font-size: 19px;
+  font-weight: bold;
+  max-width: 100%;
+  margin-left: 1px;
+  padding: 15px;
+  border: 1.5px solid #01475440;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+}
+
+.statistics-wrapper .card {
+  height: 130px;
+  margin: 4px 0 4px 0;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+ 
+ 
+}
+
+.daily-covid-bed-statistics-wrapper .card {
+  height: 93px;
+  margin: 4px 0 4px 0;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+}
+.daily-covid-wrapper .card :hover{
+  background-color: #febc9f;
+  transition: all 0.2s ease-in-out;
+}
+.cummulative-covid-wrapper .card :hover{
+  background-color: #febc9f;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffefd6;
+  text-align: center;
+}
+ 
+.daily-covid-bed-statistics-wrapper .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.vaccination-wrapper {
+  padding: 5px;
+  border: 1.5px solid #01475440;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+}
+
+.vaccination-wrapper .card {
+  height: 70px;
+  margin: 4px 0 4px 0;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+}
+
+.vaccination-wrapper .card-body {
+  flex-direction: row ;
+}
+
+.daily-stats-card {
+  cursor: pointer;
+}
+
+div.daily-stats-card:hover {
+  transition: all 0.2s ease-in-out;
+  background: #01475412;
+}
+.statistics-wrapper {
+  padding: 5px;
+  border: 1.5px solid #01475440;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+  height: 347px;
+}
+
+.heading-card {
+  text-transform: capitalize;
+  font-size: initial;
+  font-weight: bold;
+  color: #0d0d0d;
+}
+
+.heading-card-small {
+  text-transform: capitalize;
+  font-size: smaller;
+  font-weight: bold;
+  color: #0d0d0d;
+  margin-bottom: 0rem;
+}
+
+.vaccination-card {
+  font-size: large;
+  font-weight: unset;
+  color: #0d0d0d;
+  margin-bottom: 0rem;
+}
+
+.char-section{
+  border: 1.5px solid #01475440;
+}
+
+.filter-section{
+  padding: 1rem;
+  border: 1.5px solid #01475440;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.covid-filter {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.daily-covid-card-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ed1212;
+}
+
+.vaccination-card {
+  text-transform: capitalize;
+  font-size: initial;
+  font-weight: bold;
+  color: #0d0d0d;
+}
+
+.vaccination-card-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #11629b;
+}
+
+.cummulative-card-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #d07321;
+}
+
+.bed-card-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #236994;
+}
+
+.section-2 {
+  padding: 10px 0 0px 0;
+  margin: 10px 0 0px 0;
+  height: 105px;
+}
+.section-3 {
+  padding: 9px 0 10px 0;
+  margin: 0px 0 10px 0;
+  height: 450px;
+}
+.section-postivity-charts{
+  padding: 10px 0 0px 0;
+  margin: 10px 0 0px 0;
+  height: 500px;
+}
+.bed-statistics-wrapper {
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bed-statistics-wrapper .card {
+  height: 90px;
+}
+.bed-statistics-wrapper .card .card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bed-stats-card-body{
+  padding: 1.7rem 0.2rem 2rem 0.2rem;
+ 
+}
+
+.bed-statistics-wrapper .col-sm {
+  padding: 0px;
+}
+/* .bed-statistics-container{
+  padding:0px;
+
+} */
+.dashboard_map_wrapper {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 98%;
+  padding-left: 11px;
+}
+
+.bed-stats-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.vaccinationcards-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-chart {
+  margin: 10px 0 0 10px;
+  font-size: 18px;
+}
+
+.section-4 {
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  height: 180px;
+}
+
+.section-5 {
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  height:413px;;
+}
+
+.vaccination-chart-info-wrapper {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vaccination-chart-wrapper {
+  padding: 20px;
+  border: 1.5px solid #01475440;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+  margin-bottom: 20px;
+  height:450px;
+}
+.vaccine-chart-subtitle{
+  text-align: center;
+  font-size: 10px;
+  color: #000000a6;
+  font-weight: 600;
+}
+/* ``````````````````````````````````````````````````````````````````````````````````````````````````````````````` */
+
+ 
+.section-1-2{
+  padding: 10px 0 0px 0;
+  margin: 10px 0 0px 0;
+  height: 105px;
+}
+
+.bed-2-statistics-wrapper{
+  padding: 5px;
+  border: 1.5px solid #01475440;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+}
+
+.bed-2-wrapper{
+    padding: 5px;
+    border: 1.5px solid #01475440;
+    box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+    border-radius: 6px !important;
+}
+.bed-2-card{
+  text-transform: capitalize;
+  font-size: initial;
+  font-weight: bold;
+  color: #0d0d0d;
+  background: #ef934552;
+  /* background:  */
+  padding: 4px;
+}
+
+.bed-2-count-info-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid #ffacac;
+  /* background: linear-gradient(to right, #fcba9d36 , #ffff0000); */
+  /* padding: 0 0 0 8px; */
+}
+/* .bed-2-count-info-wrapper:hover {
+  background-color: #febc9f;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+} */
+
+.bed-2-count-info-wrapper-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-left: 3px solid #ffacac; */
+  /* background: linear-gradient(to right, #fcba9d36 , #ffff0000); */
+  /* padding: 0 0 0 8px; */
+}
+/* .bed-2-count-info-wrapper-1:hover {
+  background-color: #febc9f;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+
+}
+  */
+.bed-2-count-label{
+  font-size: smaller;
+  font-weight: 500;
+}
+.bed-2-count-number{
+  font-weight: 600;
+  font-size: 18px;
+  color: #236994;
+}
+ 
+.bed-2-wrapper .card-body{
+  /* padding: 4px 10px 5px 10px; */
+  padding: 0px;
+}
+.bed-2-count-all-info-wrapper {
+  padding: 0rem 1rem 0.5rem 1rem;
+}
+
+.heading-wrapper-bed-2 {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 2px;
+  color: #146396;
+  background: #dbecf3;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  max-width: 100%;
+  margin-left: 1px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+ 
+.leaflet-tooltip.my-labels {
+  background-color: transparent;
+  border: transparent;
+  box-shadow: none;
+  }
+
+  div.leaflet-tooltip > span{
+    font-weight: 600 !important;
+    font-size: 10px !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background:#ffffffb9; */
+    /* padding:0.5px; */
+    /* border-radius:10px; */
+
+  }
+  .bedHoverClass{
+    background-color: #febc9f;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .bedActiveClass{
+    background-color: #febc9f;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+
+/* override   legends css */
+
+
+/* Override Bootstrap Tabs CSS */
+.navbar-wrapper {
+  padding: 10px 3px 4px 15px;
+  position: fixed;
+  z-index: 1;
+  border-right: 0.5px solid #00000042;
+  box-shadow: inset 3px 0px 9px 0px #88888845;
+  height: 100%;
+}
+
+
+
+.nav-link-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 60px;
+  font-size: 0.7rem;
+  width: 90px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+div.nav-link-div:hover{
+  background: rgba(0, 0, 0, 0.05)
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #e92824;
+  background: none;
+}
+.nav-link.active:hover{
+  background: rgba(0, 0, 0, 0.05)
+}
+
+/* Override Bootstrap Tabs CSS */
+
+#dashboard-container
+{
+  margin: 0px 30px 0px 30px;
+  /* margin-left: 129px; */
+}
+/* .row{
+ width: 100%;
+} */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.el-submenu .el-menu-item {
+  min-width: 150px !important;
+}
+.el-menu--horizontal .el-submenu > .el-menu {
+  left: -68px !important;
+}
+
+
+
+
+
+#chart-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 15%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #00000021;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+#chart-overlay span {
+    display: inline-block;
+    background: #f0f2f7;
+    padding: 17px 17px;
+    border-radius: 5px;
+    color: #2a2f4d;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: visibility 0s, opacity 0.5s linear;
+    box-shadow: 0 8px 15px 0 rgb(0 0 0 / 20%);
+  }
+
+  
+.btn_cat_csv {
+  background: #109c6e;
+  color: white !important;
+  cursor: pointer;
+  border: 0;
+  border-radius: initial;
+  border-color: 3093c7;
+  margin: 0px 0px 3px 10px;
+    border-radius: 3px;
+}
+.btn_cat_csv:hover {
+  background: #088058;
+  color: white;
+  cursor: pointer;
+}
+.btn_cat_csv a{
+  color: white !important;
+  font-size: 14px;
+}
+.header-section-2{
+  font-size: 12px;
+}
+.btn-nav-link{
+   font-size:12px !important;
+   border-radius: 4px;
+   height: 40px !important;
+   padding: 9px !important;
+}
+
+.export-pdf-button{
+font-size:12px !important;
+background: #109c6e !important;
+margin-left: 4px !important;
+border-radius: 5px;
+ height: 40px;
+ padding: 9px !important;
+}
+ 
+
+.table-data-report {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height:400px;
+}
+
+.table-data-report td {
+  border: 1px solid #ddd;
+  position: sticky;
+  padding: 8px;
+}
+
+.table-data-report th {
+  border: 1px solid #ddd;
+  top: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #eef1f6;
+  position: sticky; 
+  text-align: center;
+  z-index: 1;
+}
+.table-data-report .subheading-tr {background-color: #f2f2f2;}
+
+.table-data-report tr:hover {background-color: #ddd;}
+
+.table-data-report td:first-child { text-align: center };
+
+.table-data-report tbody th { position: sticky; left: 0; }
+
+.table-data-report-container{
+  height: 500px;
+  overflow-y: auto
+}
+
+.report_filter_section_data_report{
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-pdf-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn.btnCsv{
+  color: white;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  background: #109c6e;
+  border:none;
+  border-radius: 3px;
+  width: 155px;
+  outline: none
+  
+}
+.btn.btnCsv:hover{
+  cursor: pointer;
+  background:#057e60;
+}

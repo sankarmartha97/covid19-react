@@ -1,0 +1,925 @@
+/*!
+
+=========================================================
+* ACMS  - v1.0.0
+=========================================================
+
+* Coded by Sky Map Team
+
+=========================================================
+
+/* 
+
+------------INDEX----------
+1.Global css
+2.Header component css
+3.Visitors component css
+4.Suspected visitors component css
+5.Covid map css
+6.Dashboard chart component css
+7.Login Page css
+8.Admin Page css
+9.Admin Dashboard Update Module
+10.Dashboard State Report module
+11.Dashboard Visitors component
+12.Dashboard Footer
+13.Other Css
+*/
+
+/* 
+-----------------------------
+1.Global Css
+-----------------------------
+*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 
+-----------------------------
+2.Header Component css
+-----------------------------
+*/
+.el-menu {
+  border-radius: initial !important;
+}
+.el-menu--dark {
+  /* background-color: #014754 !important; */
+  background-color: #eef1f6 !important;
+}
+.el-submenu__title:hover {
+  background: #056a7c8e !important;
+}
+.el-menu--horizontal > .el-submenu:hover .el-submenu__title {
+  border-bottom: 5px solid #d2ac7b !important;
+}
+.el-menu--horizontal .el-submenu > .el-menu {
+  position: absolute;
+  left: -115px !important;
+  top: 60px !important;
+  border: 1px solid #d1dbe5;
+  padding: 5px 0;
+  background-color: #fff;
+  z-index: 100;
+  min-width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+}
+.el_menu_ico {
+  font-size: 20px;
+  margin-top: -10px;
+}
+.el-input.el-date-editor.el-date-editor--date {
+  display: inline;
+}
+.app_logo {
+  width: 12%;
+}
+.el-menu--horizontal .el-submenu {
+  float: right !important;
+  position: relative;
+}
+.app_title {
+  margin-left: 4px;
+  color: #ce2020;
+  font-size: 18px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
+.app_title_app_name {
+  margin-left: 28px;
+  color: #0a50a0;
+  font-size: 22px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
+.header_nav {
+  background: #eef1f6;
+  height: 60px;
+  line-height: 60px;
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+}
+
+/* 
+-----------------------------
+3.visitors component css
+-----------------------------
+*/
+.total_district_report {
+  height: calc(100vh - 100px);
+  background: #023641;
+}
+.total_visitors_section {
+  margin-top: 5px;
+  margin-right: -10px;
+  margin-left: -10px;
+  height: calc(100vh - 90px);
+  overflow: hidden;
+}
+.visitors_title {
+  padding: 20px;
+  justify-content: center;
+  color: #9db3b7;
+  background: #01475478;
+  text-align: center;
+}
+
+.visitor_count_no {
+  color: #18ab6f;
+  text-align: center;
+}
+.suspected_count_no {
+  color: #ffcd66;
+  text-align: center;
+}
+.total_visitors_body {
+  padding: 0px;
+  margin-top: 10px;
+}
+.sus_visitors_body {
+  padding: 0px;
+  margin-top: 10px;
+}
+.visitors_title span {
+  font-size: 40px;
+  margin-left: 10px;
+  line-height: 15px;
+}
+.visitor_list {
+  min-height: 30px;
+  line-height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #01475478;
+  padding: 8px;
+  color: #9db3b7;
+  font-size: 12px;
+  border-bottom: 0.5px solid #04282f;
+}
+.visitor_list:hover {
+  background: #035d6d78;
+  cursor: pointer;
+}
+.sus_visitors_name {
+  color: #fdcc66;
+  font-weight: bold;
+}
+.visitors_name {
+  font-weight: bold;
+  color: #17a56d;
+}
+.visitors_location {
+  margin-left: 5px;
+}
+.visitors_entry_gate {
+  margin-left: 5px;
+}
+
+/* 
+-----------------------------
+4.Suspected visitors css
+-----------------------------
+*/
+
+.suspected_visitors_section {
+  padding: 10px;
+}
+
+/* 
+-----------------------------
+5. Covid Map
+-----------------------------
+*/
+.covid_map {
+  height: calc(60vh - 45px);
+  margin-left: -15px;
+  margin-right: -15px;
+  border: 2px solid #014754;
+  z-index: 1;
+}
+
+.info {
+  padding: 5px 7px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+/* 
+-----------------------------
+6.Dashboard chart css
+-----------------------------
+*/
+.visitor_chart {
+  margin-left: -15px;
+  margin-right: -15px;
+  background: #01475478;
+  height: calc(40vh - 45px);
+}
+.dashboard_chart_2 {
+  background: #01475478;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.dashboard_chart_2 p {
+  font-size: 12px;
+  text-align: center;
+  color: #9db3b7;
+}
+
+/* 
+-----------------------------
+7.Login page css
+-----------------------------
+*/
+
+.login_wrapper {
+  height: 100vh;
+  text-align: center;
+  margin: auto;
+}
+.login_body {
+  width: 35%;
+  border-radius: 5px;
+  background: #eaecf0;
+  display: inline-block;
+  margin-top: 5%;
+  padding: 20px;
+  border: 0.5px solid #eaecf0;
+}
+.login_logo_image {
+  width: 50%;
+}
+.login_header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 30px;
+}
+.login_inner_title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #014754;
+}
+.covid_title {
+  color: #fa6117;
+}
+
+/* 
+-----------------------------
+8.Admin page css
+-----------------------------
+*/
+
+.admin_wrapper {
+  background: white !important;
+  min-height: 100vh;
+}
+.body_title p {
+  font-size: 20px;
+  color: #149fb8;
+  line-height: 30px;
+  margin-top: 20px;
+  border-bottom: 2px solid #deb867;
+}
+.btn_approved {
+  background: #08869c !important;
+  border: initial !important;
+  color: white !important;
+}
+.btn_reject {
+  background: #f8c153 !important;
+  border: initial !important;
+  color: white !important;
+}
+
+/* 
+--------------------------------
+9.Admin Dashboard Update Module
+--------------------------------
+*/
+.dashboard_updation_wrapper {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.dash_title_wrapper {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.dashboard_updation_form {
+  border: solid 1px #eaeefb;
+  padding: 20px;
+  border-radius: 4px;
+  background: #eaeefb1c;
+  margin-bottom: 30px;
+}
+.dashboard_current_status {
+  padding: 20px;
+}
+.dash_update_title {
+  text-align: center;
+  margin: auto;
+}
+.dash_update_title p {
+  text-align: center;
+  font-size: 20px;
+  color: #149fb8;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.status_container {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.status_section {
+  width: 150px;
+  height: 100px;
+  margin-top: 10px;
+  background: #d3dce6;
+  text-align: center;
+  padding: 20px;
+  border-radius: 4px;
+}
+.status_title {
+  font-size: 9px;
+  margin-bottom: 0px;
+  color: black;
+  text-transform:capitalize;
+}
+.confirmed_number {
+  color: #f7ba2a;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.quartine_number {
+  color: #0066ffeb;
+  font-weight: bold;
+  line-height: 40px;
+}
+.recovered_number {
+  color: #17a56d;
+  font-weight: bold;
+  line-height: 40px;
+}
+.deceased_number {
+  color: red;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+/* 
+--------------------------------
+10.Dashboard State Report module
+--------------------------------
+*/
+
+.dashboard_option_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-evenly;
+  margin-left: -10px;
+  margin-right: -10px;
+  color: #9db3b7;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  height: 5rem;
+  /* height: calc( 60vh - 70px); */
+}
+.dashboard_options {
+  padding: 15px 10px;
+  min-width: 140px;
+  margin-top: 5px;
+  background: #01475478;
+  border-radius: 3px;
+}
+.dash_option_title {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.screened_number {
+  font-size: 25px;
+  color: #01cc34;
+  font-weight: bold;
+}
+.suspected_number {
+  font-size: 25px;
+  color: #cb9a00;
+  font-weight: bold;
+}
+.sample_number {
+  font-size: 25px;
+  color: #fe6603;
+  font-weight: bold;
+}
+.negative_number {
+  font-size: 25px;
+  color: #01cc35;
+  font-weight: bold;
+}
+.positive_number {
+  font-size: 25px;
+  color: #cd0004;
+  font-weight: bold;
+}
+.awaited_number {
+  font-size: 25px;
+  color: #ca6700;
+  font-weight: bold;
+}
+.isolation_number {
+  font-size: 25px;
+  color: #c0f;
+  font-weight: bold;
+}
+.recovered_number {
+  font-size: 25px;
+  color: #1ca37a;
+  font-weight: bold;
+}
+.deceased_number {
+  font-size: 25px;
+  color: #fe0106;
+  font-weight: bold;
+}
+.citizen_opt_number {
+  font-size: 25px;
+  color: #deb256;
+  font-weight: bold;
+}
+.suspected_options_number {
+  font-size: 25px;
+  color: #c38e19;
+  font-weight: bold;
+}
+.confirmed_opt_number {
+  font-size: 25px;
+  color: #da3300;
+  font-weight: bold;
+}
+.quarantine_opt_number {
+  font-size: 25px;
+  color: #da5e38e0;
+  font-weight: bold;
+}
+.recovered_opt_number {
+  font-size: 25px;
+  color: #18ab6f;
+  font-weight: bold;
+}
+.active_opt_number {
+  font-size: 25px;
+  color: #007bff;
+  font-weight: bold;
+}
+.deceased_opt_number {
+  font-size: 25px;
+  color: #cc0505;
+  font-weight: bold;
+}
+
+.state_report_title {
+  margin: auto;
+  text-emphasis: center;
+  font-weight: 500;
+  padding: 5px;
+}
+.state_report_title p {
+  font-size: 12px;
+  text-align: center;
+  color: #9accd4;
+  margin-bottom: 0px;
+}
+.dist_report_title {
+  margin: auto;
+  text-emphasis: center;
+  font-weight: 500;
+}
+.dist_report_title p {
+  font-size: 12px;
+  text-align: center;
+  color: #9accd4;
+  margin-bottom: 6px;
+}
+.dist_report_header {
+  line-height: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #014754;
+  color: #9db3b7;
+  font-size: 11px;
+  margin: auto;
+  width: 100%;
+}
+.titile_dist {
+  color: #08869c;
+  font-weight: bold;
+  width: 40%;
+  padding: 5px 10px 5px 10px;
+  background: #014754;
+}
+.title_confd {
+  color: #da3300;
+  background: rgba(218, 51, 0, 0.2);
+  font-weight: bold;
+  width: 17%;
+  padding: 4px;
+  text-align: center;
+}
+.title_rcvrd {
+  color: #17a56d;
+  font-weight: bold;
+  background: rgba(24, 171, 111, 0.2);
+  width: 13%;
+  padding: 4px;
+  text-align: center;
+}
+.titledcsd {
+  font-weight: bold;
+  color: #cc0505;
+  width: 13%;
+  padding: 4px;
+  background: rgba(204, 5, 5, 0.2);
+  text-align: center;
+}
+.titleactive {
+  font-weight: bold;
+  color: #007bff;
+  width: 17%;
+  padding: 4px;
+  background: #161625;
+  text-align: center;
+}
+
+/* 
+--------------------------------
+11.Dashboard Visitors component
+--------------------------------
+*/
+
+.dist_visitor_list {
+  line-height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 100%;
+  background: #01475478;
+  color: #9db3b7;
+  font-size: 12px;
+  border-bottom: 0.5px solid #18b4d05e;
+}
+.dist_visitor_list:hover {
+  background: #035d6d78;
+  cursor: pointer;
+  transition: ease-out 0.2s;
+}
+.confirmed_inner_list {
+  text-align: center;
+  width: 17%;
+  padding: 5px 15px 5px 10px;
+}
+.recovered_inner_list {
+  text-align: center;
+  padding: 5px 15px 5px 10px;
+  width: 13%;
+}
+.deceased_inner_list {
+  text-align: center;
+  padding: 5px 15px 5px 10px;
+  width: 13%;
+}
+
+.active_inner_list {
+  text-align: center;
+  padding: 5px 15px 5px 10px;
+  width: 17%;
+}
+.dist_visitor_inner_list {
+  text-align: left;
+  padding: 5px 15px 5px 10px;
+  width: 40%;
+}
+
+/* 
+--------------------------------
+12.Dashboard Footer
+--------------------------------
+*/
+
+.site_footer_wrapper {
+  position: absolute;
+  bottom: 0;
+  min-height: 30px;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+.site_footer_wrapper p {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #9db3b7;
+}
+.helpline_number {
+  color: #deb256;
+}
+
+/* 
+--------------------------------
+13.Other Css
+--------------------------------
+*/
+
+.body_map_wrapper {
+  height: calc(60vh - 45px);
+  overflow: hidden;
+}
+.body_chart_wrapper {
+  overflow: hidden;
+  margin-top: 5px;
+  height: calc(40vh - 45px);
+}
+
+[data-simplebar] {
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  max-height: calc(100vh - 175px) !important;
+}
+#myChart1 {
+  height: calc(40vh - 45px);
+}
+#myChart2 {
+  height: 150px !important;
+}
+
+.dashboard_chart_2 {
+  height: calc(40vh - 45px);
+}
+.dashboard_chart_2 p {
+  margin-bottom: 0px;
+}
+.tab_ico {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.el-tabs__item.is-active {
+  color: #20a0ff !important;
+  border-bottom: none !important;
+  background: #eff2f7;
+}
+.el-tabs__item {
+  font-size: 15px !important;
+  color: #5e6d82 !important;
+}
+.el-tabs__header {
+  border-bottom: none !important;
+}
+.mobile_app_user_wrapper {
+  margin-top: 15px;
+}
+.visitor_count {
+  color: #28a745;
+  margin-left: 5px;
+  border: 0.5px solid #026e1b;
+  border-style: dashed;
+  padding: 10px;
+}
+.last_updated_status {
+  color: #149fb8;
+  border: 0.5px solid #00697b;
+  border-style: dashed;
+  padding: 10px;
+}
+.report_filter_title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #014754;
+  margin-right: 15px;
+}
+.report_filter_section {
+  margin-bottom: 5px;
+  float: right;
+}
+.user_not_found {
+  min-height: 65vh;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 15%;
+  color: #99a9bf;
+}
+.user_ico {
+  font-size: 50px;
+}
+
+.loader_section {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.loader_section1 {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #20a0ff;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.citizen_screened_title {
+  justify-content: center;
+  display: grid;
+  align-content: center;
+  padding-left: 10px;
+  height: 40px;
+  background: #0db1d0;
+  color: white;
+  line-height: 30px;
+  border-left: 5px solid #e0bc70;
+  border-radius: 4px;
+}
+
+.citizen_screened_body {
+  border-left: 1px solid #e0bc70;
+  margin-top: -16px;
+  padding: 15px;
+  font-size: 12px;
+  background: #eef1f6;
+  margin-bottom: 10px;
+}
+
+div.citizen_screened_body input {
+  width: 70px;
+  display: block;
+  padding-left: 5px;
+  font-size: 13px;
+  font-weight: 400;
+}
+div.citizen_screened_body input:disabled {
+  border: none;
+  text-align: right;
+  /* display: initial; */
+  /* width: 10px; */
+  /* padding-left: 2px; */
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.45s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.leaflet-control {
+ 
+  line-height: 15px !important;
+}
+.legend { text-align: left; line-height: 18px; color: #555; font-size:12px;} 
+.legend i { width: 16px; height: 14px; float: left; margin-right: 8px; opacity: 0.7; }
+
+.leaflet-container .leaflet-control-attribution {
+  background: #fff;
+  font-weight: 500;
+}
+
+.el-checkbox__label{
+  display: none ;
+}
+
+.icon-edit-row{
+    font-size: 10px;
+    margin-right: 7px;
+}
+
+.expandable-body-section-1{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  border-left: 4px solid  #85bfca9c ;
+  padding-left: 7px;
+  width: 367px;
+}
+div.citizen_screened_body input {
+  height: 97%;
+  max-height: 25px;
+}
+
+.label-expandable-row
+{
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-right: 10px;
+  width: 280px;
+}
+
+.expandable-body-section-1-row-wrapper{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+#btn-cancel-edits{
+color: #fff;
+background-color: #dc3545 !important;
+border-color: #dc3545;
+}
+
+.el-table .cell {
+  word-break: break-word !important;
+}
+.submit-edits-btn{
+  float: right;
+  margin-bottom: 30px !important;
+}
+
+.is-leaf > .cell {
+  line-height: 20px !important;
+}
+
+.el-table .cell, .el-table th>div {
+  padding-left: 10px !important;
+  padding-right: 5px !important;
+}
+

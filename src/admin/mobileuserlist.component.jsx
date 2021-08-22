@@ -1,0 +1,244 @@
+import React, { Component, Fragment } from 'react';
+import 'element-theme-default';
+import { i18n } from 'element-react';
+import locale from 'element-react/src/locale/lang/en';
+import { Button, Table, Pagination,MessageBox, Message } from 'element-react';
+i18n.use(locale);
+
+export default class MobileUserList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      //
+      columns: [
+        {
+          label: 'S.No',
+          prop: 's_no',
+          width: 80,
+          render: function (data) {
+            return <span>{data.id}</span>;
+          },
+        },
+        {
+          label: 'Name',
+          prop: 'name',
+          width: 180,
+          render: function (data) {
+            return (
+              <span>
+                <i className='fas fa-user'></i>
+                <span style={{ marginLeft: '10px' }}>{data.name}</span>
+              </span>
+            );
+          },
+        },
+        {
+          label: 'Mobile Number',
+          prop: 'mobile_number',
+          width: 160,
+          render: function (data) {
+            return <span>{data.phone}</span>;
+          },
+        },
+        {
+          label: 'Email Address',
+          prop: 'email_id',
+          render: function (data) {
+            return <span>{data.email}</span>;
+          },
+        },
+        {
+          label: 'Operations',
+          render: function (data) {
+            return (
+              <span>
+                <Button
+                  className='btn_approved'
+                  size='small'
+                  onClick={btnChangeStatus.bind(this, data.id, true)}
+                >
+                  Approved
+                </Button>
+                <Button
+                  className='btn_reject'
+                  size='small'
+                  onClick={btnChangeStatus.bind(this, data.id, false)}
+                >
+                  Reject
+                </Button>
+              </span>
+            );
+          },
+        },
+      ],
+
+      //
+      data: [],
+      data_by_page: [],
+      current_page: 1,
+      page_size: 10,
+      total: 1,
+      loading: false
+    };// Eof state def
+
+
+    // 
+    const btnChangeStatus = (dataid, status) => {
+      MessageBox.confirm(
+        'Are you sure... Continue?',
+        'Warning',
+        {
+          confirmButtonText: 'OK',
+          cancelButtonText: 'Cancel',
+          type: 'warning',
+        }
+      )
+        .then(() => {
+          fetch(`${process.env.REACT_APP_URL}/users/${dataid}`, {
+            method: 'PUT',
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify({
+              status,
+              registraion: true,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => this.setState({ data },() =>{
+              this.setRecordsByPage();
+              Message({
+                        type: 'success',
+                        message: 'Sussessfully done !',
+                      });
+            }));
+        })
+        .catch(() => {
+          Message({
+            type: 'info',
+            message: 'Action canceled !',
+          });
+        });
+    };
+
+
+  }// Eof constructor def
+
+
+  //
+  componentDidMount() {
+    this.mobileUser();
+  }
+
+  //
+  mobileUser = async() => {
+    try {
+      this.setState({loading:true})
+      await fetch(`${process.env.REACT_APP_URL}/users/`)
+      .then((res) => res.json())
+      .then((data) => this.setState({ data }, () =>{
+        this.setRecordsByPage();
+        setTimeout(() => {
+          this.setState({loading:false})
+        }, 1000);
+      }));
+      
+    } catch (error) {
+      console.log(error)
+      this.setState({loading:true})
+    }
+    
+  }
+
+
+  //
+  onSizeChange= (size) => {
+    this.setState({loading:true})
+    console.log('onChange:size=', size);
+    this.setState({current_page:1});
+    this.setState({page_size:size},()=>{
+      this.setRecordsByPage();
+      setTimeout(() => {
+        this.setState({loading:false})
+      }, 250);
+    });
+  }
+
+
+  //
+  onPageChange = (current) => {
+    this.setState({loading:true})
+    console.log('onChange:current=', current);
+    this.setState({current_page:current},()=>{
+      this.setRecordsByPage();
+      setTimeout(() => {
+        this.setState({loading:false})
+      }, 250);
+    });
+  }
+
+
+  //
+  setRecordsByPage(){
+    this.setState({total:this.state.data.length});
+    var first_record_index =(this.state.current_page - 1)*this.state.page_size;
+    var last_record_index = this.state.page_size*(this.state.current_page);
+    this.setState({data_by_page: this.state.data.slice(first_record_index,last_record_index) });
+  }
+
+
+
+
+  // render main component
+  render() {
+    const length = this.state.data.length;
+    const loading = this.state.loading;
+    if(length === 0){
+      return <UserNotFound />
+    }
+    return (
+      <Fragment>
+        {!loading ? (
+          <>
+            <Table
+              className='en-US'
+              style={{ width: '100%' }}
+              columns={this.state.columns}
+              data={this.state.data_by_page}
+              height={400}
+              highlightCurrentRow={true}
+            />
+            <div className='pagination_section'>
+              <Pagination
+                layout='total, sizes, prev, pager, next, jumper'
+                total={this.state.total}
+                pageSizes={[10, 20, 30, 40, 50]}
+                pageSize={this.state.page_size}
+                currentPage={this.state.current_page}
+                onSizeChange={this.onSizeChange}
+                onCurrentChange={this.onPageChange}
+                className='mb-3 mt-3'
+              />
+            </div>
+          </>
+        ) : (
+          <div className='loader_section'>
+            <div className='loader'></div>
+          </div>
+        )}
+      </Fragment>
+    );
+  }
+}
+
+
+
+// child component
+const UserNotFound = () =>{
+  return(
+    <div className="container user_not_found">
+      <i class="fas fa-users user_ico"></i>
+      <p>User not found</p>
+    </div>
+  )
+}

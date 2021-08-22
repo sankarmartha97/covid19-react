@@ -1,0 +1,67 @@
+{
+  "name": "acms",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://www.apfightcovid19.org",
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@react-pdf/renderer": "^2.0.17",
+    "@reduxjs/toolkit": "^1.6.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "array-sort": "^1.0.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2",
+    "chart.js": "^3.3.2",
+    "date-fns": "^2.22.1",
+    "dateformat": "^4.5.1",
+    "dotenv": "^8.2.0",
+    "element-react": "^1.4.34",
+    "element-theme-default": "^1.4.13",
+    "jquery": "^3.6.0",
+    "jwt-decode": "^2.2.0",
+    "leaflet": "^1.6.0",
+    "leaflet-defaulticon-compatibility": "^0.1.1",
+    "leaflet.awesome-markers": "^2.0.5",
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.1",
+    "react": "^16.13.1",
+    "react-chartjs-2": "^3.0.3",
+    "react-csv": "^2.0.3",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.20",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^4.0.3",
+    "react-spinners": "^0.11.0",
+    "react-toastify": "^5.5.0",
+    "retina-dom-to-image": "^2.5.6",
+    "simplebar-react": "^2.1.0",
+    "sort-array": "^4.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

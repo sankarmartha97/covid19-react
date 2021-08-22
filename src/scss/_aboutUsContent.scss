@@ -1,0 +1,21 @@
+.about-us-wrapper {
+    margin-top:50px;
+    margin-bottom: 50px;
+  .inside-wrapper {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 10px 20px;
+    @include mobile {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    @include mobile-xs {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    @include tablet {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+}

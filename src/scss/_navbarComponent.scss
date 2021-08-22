@@ -1,0 +1,114 @@
+.navbar-wrapper-website{
+  background: $navbar-color;
+  .inside-wrapper{
+    margin-left: 80px;
+    // margin-right: 80px;
+    margin-right: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+    // justify-content: center;
+    // margin-right: 0px;
+    @include mobile{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    @include mobile-xs{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    @include tablet{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .bg-brown{
+      background: $navbar-color !important;
+      color: #ffffff;
+    }
+  }
+}
+
+// .nav-item{
+//   min-width: 150px;
+// }
+.btn-login{
+  background: #ffffff;
+  color: #000000;
+  width: 120px;
+  // border-radius: 10px;
+  border-radius: 35px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  color: #ffffff;
+  // min-width: 160px !important;
+  font-size: 14px;
+  text-align: center;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  font-weight: bold;
+  &:hover{
+    cursor: pointer;
+    background: darken($navbar-color,5%);
+  }
+  @include tablet{
+    min-width: 140px !important;
+    font-size: 12px;
+  }
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.navbar-light .navbar-brand {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+
+  &:hover{
+    color: #ffffff;
+    cursor: pointer;
+  }
+  i{
+    margin-right: 10px;
+  }
+  @include tablet{
+    font-size: 12px;
+  }
+}
+.nav-item{
+  @include mobile{
+    margin-top: 10px;
+  }
+  @include mobile-xs{
+    margin-top: 10px;
+  }
+  @include tablet{
+    margin-top: 10px;
+  }
+}
+.nav-item.btn-nav-item{
+  @include mobile{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  @include tablet{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  margin-left: 10px;
+  @include mobile-xs{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+.advisory-row{
+  a{
+    display: inline;
+  }
+}
