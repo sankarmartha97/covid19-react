@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, Font, Image } from "@react-pdf/renderer";
 
 import fonts from "./fontRegisterJson";
-import { numberWithCommas } from "./utils/numberComma";
+import { numberWithCommas } from "../../utils/numberComma";
 const LIGHT_BACKGROUND_COLOR = "#FFFDEA";
 const HEADING_BACKGROUND_COLOR = "#F4EAD2";
 
@@ -10,7 +10,7 @@ Font.register(fonts);
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: LIGHT_BACKGROUND_COLOR,
+    // backgroundColor: LIGHT_BACKGROUND_COLOR,
     height: "100%",
     borderRadius: 4,
     display: "flex",
@@ -42,17 +42,17 @@ const styles = StyleSheet.create({
   card: {
     height: 45,
     width: 130,
-    backgroundColor: "#FFFFFF",
     display: "flex",
     flexDirection: "column",
     padding: 6,
     justifyContent: "space-between",
     borderRadius: 4,
+    backgroundColor: "#ffefd6",
   },
   label: {
     fontSize: 8,
     // color: "#A47861"
-    color: "#02075D",
+    // color: "#02075D",
     fontFamily: "Poppins",
     fontStyle: "SemiBold",
   },
@@ -60,12 +60,14 @@ const styles = StyleSheet.create({
     fontSize: 9,
     fontFamily: "Poppins",
     fontStyle: "SemiBold",
+    color: "#d07321",
   },
   cardInnerSection1: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignContent: "center",
+    backgroundColor: "#ffefd6",
   },
   bodyContainer: {
     display: "flex",

@@ -1,15 +1,14 @@
 import React from "react";
-import { Text, View, StyleSheet, Font, Image } from "@react-pdf/renderer";
+import { Text, View, StyleSheet, Font } from "@react-pdf/renderer";
 
 import fonts from "./fontRegisterJson";
-const LIGHT_BACKGROUND_COLOR = "#FFFDEA";
 const HEADING_BACKGROUND_COLOR = "#F4EAD2";
 
 Font.register(fonts);
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: LIGHT_BACKGROUND_COLOR,
+    // backgroundColor: LIGHT_BACKGROUND_COLOR,
     height: "100%",
     borderRadius: 4,
     display: "flex",
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
   card: {
     height: 80,
     width: 182,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#ffefd6",
     display: "flex",
     flexDirection: "column",
     borderTopLeftRadius: 3,
@@ -53,6 +52,7 @@ const styles = StyleSheet.create({
     fontSize: 9,
     fontFamily: "Poppins",
     fontStyle: "SemiBold",
+    color: "#236994",
   },
   cardInnerSection1: {
     textAlign: "center",
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   bedLabel: {
     fontSize: 8,
-    color: "#02075D",
+    // color: "#02075D",
     fontFamily: "Poppins",
     fontStyle: "SemiBold",
   },

@@ -37,6 +37,12 @@
 }
 
 @media (max-width: 575.98px) {
+  .covid-behaviour-wrapper .card {
+    height: 122px  !important;
+  }
+.covid-behaviour-wrapper{
+  height: 148px !important;
+}
   .total_visitors_section {
     margin-top: 45px;
     margin-left: 0px;
@@ -294,7 +300,9 @@
     font-size: 15px !important;
   }
   .vaccination-chart-wrapper {
-    height:400px;
+    margin-top: 4px !important;
+    height:370px !important;
+    background: white;
   }
 
   .section-5 {
@@ -311,6 +319,12 @@
 */
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .covid-behaviour-wrapper .card {
+    height: 122px  !important;
+  }
+  .covid-behaviour-wrapper{
+    height: 168px !important;
+  }
   .total_visitors_section {
     margin-top: 45px;
     margin-left: 0px;
@@ -576,6 +590,11 @@
 ---------------------------------------
 */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .covid-behaviour-wrapper .card {
+    height: 166px  !important;
+  }
+ 
+  
   .dash_option_title {
     font-size: 10px;
   }
@@ -651,6 +670,9 @@
 */
 
 @media screen and (min-width: 1400px) and (max-width: 1599.98px) {
+ .cum-covid-wrapper .card {
+   height: 145px !important;
+ }
   .container {
     min-width: 1370px;
     overflow-x: hidden;
@@ -712,6 +734,16 @@
 */
 
 @media screen and (min-width: 1600px) and (max-width: 1899.98px) {
+  .covid-behaviour-wrapper .card {
+    height: 195px  !important;
+  }
+  .covid-behaviour-wrapper  .card-title{
+    font-size: initial;
+  }
+ .cum-covid-wrapper .card {
+   height: 145px !important;
+ }
+
   .container {
     min-width: 1570px;
     overflow-x: hidden;
@@ -775,6 +807,13 @@
 */
 
 @media screen and (min-width: 1900px) {
+  .covid-behaviour-wrapper .card {
+    height: 196px !important;
+  }
+ .cum-covid-wrapper .card {
+   height: 145px !important; 
+ } 
+
   #myChart2 {
     height: 280px !important;
   }
@@ -829,6 +868,7 @@
   .login_logo_image {
     width: 40%;
   }
+
 }
 
 /* ``````````````````````````````````````````````````````````````````````````````````````````````````````````````` */
@@ -1491,11 +1531,27 @@ border-radius: 5px;
   background: #109c6e;
   border:none;
   border-radius: 3px;
-  width: 155px;
+  width: 150px;
   outline: none
   
 }
 .btn.btnCsv:hover{
   cursor: pointer;
   background:#057e60;
+}
+
+
+.covid-behaviour-wrapper {
+  padding: 5px;
+  border: 1.5px solid #01475440;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
+  height: 448px;
+}
+
+.covid-behaviour-wrapper .card {
+  height: 182px;
+  margin: 4px 0 4px 0;
+  box-shadow: 0 4px 10px rgb(0 29 54 / 4%);
+  border-radius: 6px !important;
 }
