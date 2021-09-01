@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const CumStatistics = ({ cummulative, oneDayChange }) => (
+const CumStatistics = ({ cummulative }) => (
   <View style={styles.container}>
     <View style={styles.headingContainer}>
       <Text style={styles.headingText}>CUMULATIVE COVID STATISTICS </Text>
@@ -90,7 +90,7 @@ const CumStatistics = ({ cummulative, oneDayChange }) => (
           </View>
           <Text style={styles.value}>
             {numberWithCommas(
-              parseInt(cummulative.tested) + parseInt(oneDayChange.tested)
+              parseInt(cummulative.tested)
             )}
           </Text>
         </View>
@@ -101,7 +101,7 @@ const CumStatistics = ({ cummulative, oneDayChange }) => (
           </View>
           <Text style={styles.value}>
             {numberWithCommas(
-              parseInt(cummulative.confirmed) + parseInt(oneDayChange.confirmed)
+              parseInt(cummulative.confirmed)
             )}
           </Text>
         </View>
@@ -114,7 +114,7 @@ const CumStatistics = ({ cummulative, oneDayChange }) => (
           </View>
           <Text style={styles.value}>
             {numberWithCommas(
-              parseInt(cummulative.recovered) + parseInt(oneDayChange.recovered)
+              parseInt(cummulative.recovered)
             )}
           </Text>
         </View>
@@ -125,7 +125,7 @@ const CumStatistics = ({ cummulative, oneDayChange }) => (
           </View>
           <Text style={styles.value}>
             {numberWithCommas(
-              parseInt(cummulative.deceased) + parseInt(oneDayChange.deceased)
+              parseInt(cummulative.deceased)
             )}
           </Text>
         </View>

@@ -70,7 +70,7 @@ const New_dashboard = () => {
     const [mapViewType, setMapViewType] = useState('Daily');
     const [fetched, setFetched] = useState(false);
     const [hasError, setErrors] = useState(false);
-    const [oneDayChange, setOneDayChange] = useState([]);
+    // const [oneDayChange, setOneDayChange] = useState([]);
     const [date, setDate] = useState('');
     const [daily, setDaily] = useState('');
     const [vaccination, setVaccination] = useState([]);
@@ -203,8 +203,8 @@ const New_dashboard = () => {
             //     .catch(err => setErrors(true));
             setDaily(response.data[0]);
             setVaccination(vaccinationResponse.data.data[0]);
-            setCummulative(cummulativeResponse.data.data[0]);
-            setOneDayChange(cummulativeResponse.data.total[0])
+            // setOneDayChange(cummulativeResponse.data.data[0]);
+            setCummulative(cummulativeResponse.data.total[0])
             setBeds(bed.data.data[0])
             setBedInfo(bedInfoRes.data.data[0])
 
@@ -802,7 +802,7 @@ const New_dashboard = () => {
                                                 <PDFDownloadLink
                                                     className="reactPdfDownload"
                                                     document={<DashboardReport daily={daily} cummulative={cummulative}
-                                                        oneDayChange={oneDayChange} bedInfo={bedInfo} vaccination={vaccination}
+                                                        bedInfo={bedInfo} vaccination={vaccination}
                                                         mapImageUrl={mapImageDataUrl}
                                                         districtChartImageUrl={districtChartImageDataUrl}
                                                         stateChartImageUrl={stateChartImageDataUrl}
@@ -927,7 +927,7 @@ const New_dashboard = () => {
                                                             <div class="card" onClick={() => onClickCard('cumTested', 'cummulative')} >
                                                                 <div class="card-body bed-stats-card-body">
                                                                     <div class="card-title  heading-card-small">TOTAL TESTS DONE </div>
-                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.tested) + parseInt(oneDayChange.tested))}</p>
+                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.tested))}</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -935,7 +935,7 @@ const New_dashboard = () => {
                                                             <div class="card" onClick={() => onClickCard('cumConfirmed', 'cummulative')}>
                                                                 <div class="card-body bed-stats-card-body">
                                                                     <div class="card-title  heading-card-small">CONFIRMED</div>
-                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.confirmed) + parseInt(oneDayChange.confirmed))}</p>
+                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.confirmed))}</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -943,7 +943,7 @@ const New_dashboard = () => {
                                                             <div class="card" onClick={() => onClickCard('cumRecovered', 'cummulative')}>
                                                                 <div class="card-body bed-stats-card-body">
                                                                     <div class="card-title  heading-card-small">RECOVERED</div>
-                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.recovered) + parseInt(oneDayChange.recovered))}</p>
+                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.recovered))}</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -951,7 +951,7 @@ const New_dashboard = () => {
                                                             <div class="card" onClick={() => onClickCard('cumDeceased', 'cummulative')}>
                                                                 <div class="card-body bed-stats-card-body">
                                                                     <div class="card-title  heading-card-small">DECEASED</div>
-                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.deceased) + parseInt(oneDayChange.deceased))}</p>
+                                                                    <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.deceased))}</p>
                                                                 </div>
                                                             </div>
                                                         </div>
