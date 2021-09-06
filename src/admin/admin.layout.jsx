@@ -12,6 +12,7 @@ import Upload from './uploadfile';
 import DataReport from './dataReport';
 // import Test from '../pages/admin.dashboard_page';
 // import Test from '../admin/admin.dashbord.body_layout';
+import SuperAdmin from './superAdmin';
 
 i18n.use(locale);
 
@@ -23,6 +24,8 @@ export default class AdminLayout extends Component {
         const insertCitizen = <span><i class="fas fa-eye tab_ico"></i>Admin Data Entry</span>
         const approvrd_report_lable = <span><i class="fas fa-mobile-alt tab_ico"></i>Approved Reports</span>
         const orders_lable = <span><i class="fas fa-clipboard tab_ico"></i>Orders</span>
+        const superadmin_lable = <span><i class="fas fa-clipboard tab_ico"></i>Super Admin</span>
+
 
         return (
             <Fragment>
@@ -48,9 +51,10 @@ export default class AdminLayout extends Component {
                             <DataReport/>
                         </Tabs.Pane>    
 
-                        {/* <Tabs.Pane label={orders_lable} name='5'>
-                            <Test />
-                        </Tabs.Pane>   */}
+                        <Tabs.Pane label={superadmin_lable} name='6'>
+                            {/* <Test /> */}
+                            <SuperAdmin />
+                        </Tabs.Pane>  
                     </Tabs>
                 </div>
             </Fragment>
