@@ -802,7 +802,10 @@ const New_dashboard = () => {
                                                 <PDFDownloadLink
                                                     className="reactPdfDownload"
                                                     document={<DashboardReport daily={daily} cummulative={cummulative}
+
                                                         bedInfo={bedInfo} vaccination={vaccination}
+
+
                                                         mapImageUrl={mapImageDataUrl}
                                                         districtChartImageUrl={districtChartImageDataUrl}
                                                         stateChartImageUrl={stateChartImageDataUrl}
@@ -935,6 +938,7 @@ const New_dashboard = () => {
                                                             <div class="card" onClick={() => onClickCard('cumConfirmed', 'cummulative')}>
                                                                 <div class="card-body bed-stats-card-body">
                                                                     <div class="card-title  heading-card-small">CONFIRMED</div>
+
                                                                     <p class="cummulative-card-text">{numberWithCommas(parseInt(cummulative.confirmed))}</p>
                                                                 </div>
                                                             </div>
