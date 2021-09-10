@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
 const DashboardReport = ({
   daily,
   cummulative,
-  oneDayChange,
   bedInfo,
   vaccination,
   covidBehaviourData,
@@ -121,7 +120,6 @@ const DashboardReport = ({
             <View style={styles.sectionWrapper}>
               <CumStatistics
                 cummulative={cummulative}
-                oneDayChange={oneDayChange}
               />
             </View>
             <View style={styles.sectionWrapper}>

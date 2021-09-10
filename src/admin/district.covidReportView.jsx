@@ -916,47 +916,46 @@ export default class DistrictCovidReport extends Component {
                     </button>
                 </div>
                 <div className='citizen_body_section'>
-                </div>
-                {length === 0 ? (
-                    // <div className="container user_not_found">
-                    //     <i className="fas fa-users user_ico"></i>
-                    //     <p>Waiting For the Data</p>
-                    // </div>
-                    <UserNotFound />
-                ) : (
-
-                    <div>
-                        {loading ? (
-                            <div className='loader_section1'>
-                                <div className='loader'></div>
-                            </div>
-                        ) : (
-                            <>
-                                <Table
-                                    className='en-US'
-                                    style={{ width: '100%' }}
-                                    columns={this.state.columns}
-                                    data={this.state.data_by_page}
-                                    border={true}
-                                    height={400}
-                                    fit={true}
-                                />
-                                <div className='pagination_section'>
-                                    <Pagination
-                                        layout='total, sizes, prev, pager, next, jumper'
-                                        total={this.state.total}
-                                        pageSizes={[10, 20, 30, 40, 50]}
-                                        pageSize={this.state.page_size}
-                                        currentPage={this.state.current_page}
-                                        onSizeChange={this.onSizeChange}
-                                        onCurrentChange={this.onPageChange}
-                                        className='mb-3 mt-3'
-                                    />
+                    {length === 0 ? (
+                        // <div className="container user_not_found">
+                        //     <i className="fas fa-users user_ico"></i>
+                        //     <p>Waiting For the Data</p>
+                        // </div>
+                        <UserNotFound />
+                    ) : (
+                        <div>
+                            {loading ? (
+                                <div className='loader_section1'>
+                                    <div className='loader'></div>
                                 </div>
-                            </>
-                        )}
-                    </div>
-                )}
+                            ) : (
+                                <>
+                                    <Table
+                                        className='en-US'
+                                        style={{ width: '100%' }}
+                                        columns={this.state.columns}
+                                        data={this.state.data_by_page}
+                                        border={true}
+                                        height={400}
+                                        fit={true}
+                                    />
+                                    <div className='pagination_section'>
+                                        <Pagination
+                                            layout='total, sizes, prev, pager, next, jumper'
+                                            total={this.state.total}
+                                            pageSizes={[10, 20, 30, 40, 50]}
+                                            pageSize={this.state.page_size}
+                                            currentPage={this.state.current_page}
+                                            onSizeChange={this.onSizeChange}
+                                            onCurrentChange={this.onPageChange}
+                                            className='mb-3 mt-3'
+                                        />
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    )}
+                </div>
 
             </Fragment>
         )
