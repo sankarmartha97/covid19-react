@@ -402,7 +402,6 @@ export default class ApprovedReport extends Component {
 
   onSizeChange = (size) => {
     this.setState({ loading: true })
-    console.log('onChange:size=', size);
     this.setState({ current_page: 1 });
     this.setState({ page_size: size }, () => {
       this.setRecordsByPage();
@@ -437,7 +436,7 @@ export default class ApprovedReport extends Component {
   }
 
   OnUnApprove = async (data) => {
-    // try {
+    try {
       axios.put(`${process.env.REACT_APP_URL}/recheckReport`, {
         id:data.id,
       }, {
@@ -464,10 +463,10 @@ export default class ApprovedReport extends Component {
             })
           }
         });
-    // }
-    // catch (err) {
-    //   console.log(err);
-    // }
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   render() {

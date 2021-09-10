@@ -69,7 +69,9 @@ export default class DashboardUpdation extends Component {
         fully_inoclat_recived_18_to_44years: '',
         first_dose_recived_18_to_44years:'',
         registered_for_vaccination: '',
+        total_first_dose_received_today: '',
         total_first_dose_received: '',
+        total_fully_inoculated_today: '',
         total_fully_inoculated: '',
         violations_reported_today:'',
         cumulative_violations_reported: '',
@@ -415,10 +417,25 @@ export default class DashboardUpdation extends Component {
           },
         ],
 
+        total_first_dose_received_today: [
+          {
+            required: true,
+            message: 'Please input Total First Dose Received Today',
+            trigger: 'change',
+          },
+        ],
+
         total_first_dose_received: [
           {
             required: true,
             message: 'Please input Total First Dose Received',
+            trigger: 'change',
+          },
+        ],
+        total_fully_inoculated_today: [
+          {
+            required: true,
+            message: 'Please input Total Fully Inoculated Today',
             trigger: 'change',
           },
         ],
@@ -464,12 +481,6 @@ export default class DashboardUpdation extends Component {
     };
   }
 
-  componentDidMount() {
-    // fetch(`${process.env.REACT_APP_URL}/districtlist`)
-    //   .then((res) => res.json())
-    //   .then((data) => this.setState({ data }));
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     this.setState({ loading: true })
@@ -487,17 +498,6 @@ export default class DashboardUpdation extends Component {
   }
 
   updatedata() {
-    // const district = this.state.form.district;
-    // const confirmed = this.state.form.positive_cases;
-    // const quarantined = this.state.form.quarantine_cases;
-    // const recovered = this.state.form.recovered_cases;
-    // const deceased = this.state.form.deceased_cases;
-    // const screened = this.state.form.citizen_screened;
-    // const suspected = this.state.form.suspected_cases;
-    // const sampleCollected = this.state.form.sample_collected;
-    // const resultAwaited = this.state.form.result_awaited;
-    // const isolation = this.state.form.isolation_cases;
-    // const negative = this.state.form.negative_cases;
     const active = this.state.form.active_cases;
     const date = this.state.form.date;
     const checkGateTested = this.state.form.tested_at_check_gate_today;
@@ -546,7 +546,9 @@ export default class DashboardUpdation extends Component {
     // const fistDoseReceived18and45 = this.state.form.first_dose_recived_18_to_44years;
     // const fullyInoculated18and45 = this.state.form.fully_inoclat_recived_18_to_44years;
     // const registorForVaccination = this.state.form.registered_for_vaccination;
+    const totalFastDoseRecived_today = this.state.form.total_first_dose_received_today;
     const totalFastDoseRecived = this.state.form.total_first_dose_received;
+    const totalFullyIncolated_today = this.state.form.total_fully_inoculated_today;
     const totalFullyIncolated = this.state.form.total_fully_inoculated;
     const violations_reported_today = this.state.form.violations_reported_today;
     const cumulative_violations_reported = this.state.form.cumulative_violations_reported;
@@ -561,26 +563,10 @@ export default class DashboardUpdation extends Component {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
         'authorization': sessionStorage.getItem('token'),
-        // 'key': localStorage.getItem('key'),
-        // 'reqid': localStorage.getItem('request'),
       },
       body: JSON.stringify({
-        // user,
         key,
         query,
-        // district,
-        // confirmed,
-        // recovered,
-        // active,
-        // deceased,
-        // quarantined,
-        // date,
-        // screened,
-        // suspected,
-        // sampleCollected,
-        // negative,
-        // resultAwaited,
-        // isolation,
         active,
         date,
         checkGateTested,
@@ -620,17 +606,9 @@ export default class DashboardUpdation extends Component {
         cccNonO2Bed,
         cccNonO2BedOccupied,
         homeIsolation,
-        // flwsFistDoseRicived,
-        // flwsFulyInoculated,
-        // hcwsFistDoseRicived,
-        // hcwsFistDoseRicived,
-        // hcwsFullyInoculated,
-        // fistDoseReceivedaboub45year,
-        // fullyInoculatedAboub45year,
-        // fistDoseReceived18and45,
-        // fullyInoculated18and45,
-        // registorForVaccination,
+        totalFastDoseRecived_today,
         totalFastDoseRecived,
+        totalFullyIncolated_today,
         totalFullyIncolated,
         violations_reported_today,
         cumulative_violations_reported,
@@ -679,25 +657,6 @@ export default class DashboardUpdation extends Component {
               rules={this.state.rules}
               labelWidth='200'
             >
-              {/* Select district */}
-              {/* <Form.Item label='Select District' prop='district'>
-                <Select
-                  value={this.state.form.district}
-                  placeholder='District'
-                  onChange={this.onChange.bind(this, 'district')}
-                  clearable={true}
-                >
-                  {this.state.data.map((el) => {
-                    return (
-                      <Select.Option
-                        key={el.id}
-                        label={el.name}
-                        value={el.name}
-                      />
-                    );
-                  })}
-                </Select>
-              </Form.Item> */}
 
               <Form.Item label='Select Date' prop='date'>
                 <DatePicker
@@ -1012,83 +971,27 @@ export default class DashboardUpdation extends Component {
                 ></Input>
               </Form.Item>
 
-              {/* <Form.Item label='Number of FLWs received first dose for vaccination' prop='flws_first_dose_recived'>
+              <Form.Item label='Total 1st Dose 18+ years Today' prop='total_first_dose_received'>
                 <Input
                   type='number'
-                  value={this.state.form.flws_first_dose_recived}
-                  onChange={this.onChange.bind(this, 'flws_first_dose_recived')}
+                  value={this.state.form.total_first_dose_received_today}
+                  onChange={this.onChange.bind(this, 'total_first_dose_received_today')}
                 ></Input>
               </Form.Item>
-
-              <Form.Item label='Number of FLWs fully inoculated' prop='flws_fully_inoculated'>
-                <Input
-                  type='number'
-                  value={this.state.form.flws_fully_inoculated}
-                  onChange={this.onChange.bind(this, 'flws_fully_inoculated')}
-                ></Input>
-              </Form.Item>
-
-              <Form.Item label='Number of HCWs received first dose for vaccination' prop='hcws_first_dose_recived'>
-                <Input
-                  type='number'
-                  value={this.state.form.hcws_first_dose_recived}
-                  onChange={this.onChange.bind(this, 'hcws_first_dose_recived')}
-                ></Input>
-              </Form.Item>
-
-              <Form.Item label='Number of HCWs fully inoculated' prop='hcws_fully_inoculated'>
-                <Input
-                  type='number'
-                  value={this.state.form.hcws_fully_inoculated}
-                  onChange={this.onChange.bind(this, 'hcws_fully_inoculated')}
-                ></Input>
-              </Form.Item>
-
-              <Form.Item label='Number of Citizens > 45 years received first dose for vaccination' prop='first_dose_recived_45years'>
-                <Input
-                  type='number'
-                  value={this.state.form.first_dose_recived_45years}
-                  onChange={this.onChange.bind(this, 'first_dose_recived_45years')}
-                ></Input>
-              </Form.Item>
-
-              <Form.Item label='Number of Citizens > 45 years fully inoculated' prop='fully_inoculated_recived_45years'>
-                <Input
-                  type='number'
-                  value={this.state.form.fully_inoculated_recived_45years}
-                  onChange={this.onChange.bind(this, 'fully_inoculated_recived_45years')}
-                ></Input>
-              </Form.Item>
-
-              <Form.Item label='Number of Citizens between 18 to 44 years received first dose for vaccination' prop='first_dose_recived_18_to_44years'>
-                <Input
-                  type='number'
-                  value={this.state.form.first_dose_recived_18_to_44years}
-                  onChange={this.onChange.bind(this, 'first_dose_recived_18_to_44years')}
-                ></Input>
-              </Form.Item>
-
-              <Form.Item label='Number of Citizens between 18 to 44 years fully inoculated' prop='fully_inoclat_recived_18_to_44years'>
-                <Input
-                  type='number'
-                  value={this.state.form.fully_inoclat_recived_18_to_44years}
-                  onChange={this.onChange.bind(this, 'fully_inoclat_recived_18_to_44years')}
-                ></Input>
-              </Form.Item> */}
-
-              {/* <Form.Item label='Total persons registered for vaccination'>
-                <Input
-                  type='number'
-                  value={this.state.form.registered_for_vaccination}
-                  onChange={this.onChange.bind(this, 'registered_for_vaccination')}
-                ></Input>
-              </Form.Item> */}
 
               <Form.Item label='Cumulative 1st Dose 18+ years till date' prop='total_first_dose_received'>
                 <Input
                   type='number'
                   value={this.state.form.total_first_dose_received}
                   onChange={this.onChange.bind(this, 'total_first_dose_received')}
+                ></Input>
+              </Form.Item>
+
+              <Form.Item label='Total 2nd Dose 18+ years Today' prop='total_fully_inoculated_today'>
+                <Input
+                  type='number'
+                  value={this.state.form.total_fully_inoculated_today}
+                  onChange={this.onChange.bind(this, 'total_fully_inoculated_today')}
                 ></Input>
               </Form.Item>
 
