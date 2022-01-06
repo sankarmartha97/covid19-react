@@ -323,7 +323,7 @@ export default class ApprovedReport extends Component {
       this.setState({ loading: true })
       var q = '?';
       if (district !== 'null') {
-        q = `district=${district}`
+        q = q +`district=${district}`
       }
       if (date !== null && date !== 'null') {
         q = q + `&date=${date}`
