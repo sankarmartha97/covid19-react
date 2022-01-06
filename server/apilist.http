@@ -1,0 +1,19 @@
+
+GET http://localhost:4000/deshbord/cumilate
+
+###
+Get http://localhost:4000/deshbord/cumulative
+
+###
+
+GET http://localhost:4000/recentapproved?date=2021-07-10
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluIiwidXNlcklkIjo1OSwicGFzc3dvcmQiOiIkMmEkMTAkN1dFLmpYdzRpLnMxY2l0alhtb0daZXM5MERMcTR1UnhjbmpxajR2dE9VUERrU0F6QU4xc0ciLCJlbWFpbCI6IiIsImlhdCI6MTYzMDYwNTg4OSwiZXhwIjoxNjMwNzI1ODg5fQ.U7NxMUaGWrafVAgkw5xzn4qViSjOXo1dFBqNUcI9PH4
+
+###
+PUT http://localhost:4000/recheckReport
+content-type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluIiwidXNlcklkIjo1OSwicGFzc3dvcmQiOiIkMmEkMTAkN1dFLmpYdzRpLnMxY2l0alhtb0daZXM5MERMcTR1UnhjbmpxajR2dE9VUERrU0F6QU4xc0ciLCJlbWFpbCI6IiIsImlhdCI6MTYzMDYwNTg4OSwiZXhwIjoxNjMwNzI1ODg5fQ.U7NxMUaGWrafVAgkw5xzn4qViSjOXo1dFBqNUcI9PH4
+
+{
+    "id": 10148
+}

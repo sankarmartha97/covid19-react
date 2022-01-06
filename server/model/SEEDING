@@ -1,0 +1,4 @@
+VALUES ('sankar','sankar','abode 60','1234567890',
+		   '2','anc','2','abc','adhar','1234567890',
+		   false,63,true,true,true,true,'abc','1234567890',
+			'AR123RX123',3); 

@@ -44,11 +44,12 @@
     "sort-array": "^4.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "devstart": "react-scripts start",
     "lnxBuild": "GENERATE_SOURCEMAP=false react-scripts build",
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "yarn run build && (cd server && yarn start)"
   },
   "eslintConfig": {
     "extends": "react-app"
