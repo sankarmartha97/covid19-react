@@ -49,7 +49,7 @@
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "yarn run build && (cd server && yarn start)"
+    "start": "npm run build && (cd server && npm start)"
   },
   "eslintConfig": {
     "extends": "react-app"
